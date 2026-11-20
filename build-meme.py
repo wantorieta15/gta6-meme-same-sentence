@@ -195,11 +195,11 @@ def prison_panel(img, d):
     # brick seams
     for yy in range(170, 830, 46):
         d.line([(0, yy), (540, yy)], fill=(60, 64, 80), width=2)
-    # tally marks on the wall
-    tally(d, 36, 210, 4, s=1.0)
-    tally(d, 36, 260, 4, s=1.0)
-    tally(d, 36, 310, 3, s=1.0)
-    d.text((36, 360), "DAY 4,811", font=ImageFont.truetype(ANTON, 36),
+    # tally marks on the wall (clear of the LUCIA label above)
+    tally(d, 36, 224, 4, s=1.0)
+    tally(d, 36, 274, 4, s=1.0)
+    tally(d, 36, 324, 3, s=1.0)
+    d.text((36, 374), "DAY 4,811", font=ImageFont.truetype(ANTON, 36),
            fill=(235, 235, 235))
     # barred window with the Vice City sunset
     wx0, wy0, wx1, wy1 = 300, 190, 520, 430
@@ -267,9 +267,9 @@ def room_panel(img, d):
     # floor
     d.rectangle([540, 760, 1080, 830], fill=(30, 22, 40))
     d.line([(540, 760), (1080, 760)], fill=(80, 60, 100), width=3)
-    # pizza box on the floor
-    d.polygon([(560, 800), (640, 800), (640, 826), (560, 826)], fill=(196, 148, 92))
-    d.polygon([(572, 806), (600, 806), (586, 822)], fill=(255, 196, 90))
+    # pizza box on the floor, right side (kept clear of the divider)
+    d.polygon([(960, 800), (1040, 800), (1040, 826), (960, 826)], fill=(196, 148, 92))
+    d.polygon([(972, 806), (1000, 806), (986, 822)], fill=(255, 196, 90))
     # couch
     d.rounded_rectangle([560, 600, 1060, 780], radius=26, fill=COUCH)
     d.rounded_rectangle([560, 600, 1060, 700], radius=26, fill=COUCH)
